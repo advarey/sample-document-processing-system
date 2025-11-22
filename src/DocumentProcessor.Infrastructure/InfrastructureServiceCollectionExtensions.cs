@@ -126,7 +126,7 @@ public static class InfrastructureServiceCollectionExtensions
 
             // Always drop and recreate the database to ensure schema is up to date
             logger.LogWarning("Dropping and recreating database to ensure schema is current");
-            await context.Database.EnsureDeletedAsync();
+            // await context.Database.EnsureDeletedAsync();
             logger.LogInformation("Database dropped successfully");
 
             // Create database from model without running migrations
